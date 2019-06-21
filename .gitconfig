@@ -1,0 +1,93 @@
+[core]
+	excludesfile = /Users/kenkuan/.gitignore_global
+	editor = /usr/local/bin/vim
+	quotepath = off
+	pager = diff-so-fancy | less --tabs=4 -RFX
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[user]
+	name = Ken Kuan
+	email = kf013099@gmail.com
+	signingkey = 853F492E5EA7428E
+[alias]
+    co = checkout
+    ci = commit -v
+    st = status
+    br = branch -v
+    rt = reset --hard
+    unstage = reset HEAD
+    un = reset HEAD
+    undo = reset --soft HEAD^
+    l = log --pretty=oneline --abbrev-commit --graph --decorate
+    amend = commit --amend
+    who = shortlog -n -s --no-merges
+    g = grep -n --color -E
+    cp = cherry-pick -x
+    nb = checkout -b
+    pr = "!grb push && hub pull-request"
+    su = stash --keep-index --include-untracked
+
+    # 'git add -u' handles deleted files, but not new files
+    # 'git add .' handles any current and new files, but not deleted
+    # 'git addall' now handles all changes
+    addall = !sh -c 'git add . && git add -u'
+
+    # Handy shortcuts for rebasing
+    rc = rebase --continue
+    rs = rebase --skip
+    ra = rebase --abort
+
+    rbm = "!git co master && git pull && git co - && git rebase -"
+    rbd = "!git co develop && git pull && git co - && git rebase -"
+
+    cleanup = "!git branch --merged | grep  -v '\\*\\|master\\|develop\\|release-android\\|release-ios' | xargs -n 1 git branch -d && grb prune"
+    gone = "!git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d"
+[push]
+    default = simple
+[color]
+	ui = true
+    diff = auto
+[mergetool "Kaleidoscope"]
+    cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+    trustexitcode = true
+[merge]
+    tool = Kaleidoscope
+[difftool "Kaleidoscope"]
+    cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[difftool]
+    prompt = false
+[mergetool]
+    prompt = false
+[diff]
+    tool = Kaleidoscope
+[diff "word"]
+    textconv = catdoc
+[diff "localizablestrings"]
+    textconv = "iconv -f utf-16 -t utf-8"
+    binary = false
+[commit]
+    gpgSign = true
+	template = /Users/kenkuan/.stCommitMsg
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
+[color "diff"]
+	meta = 227
+	frag = magenta bold
+	commit = 227 bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+[http]
+	sslVerify = false
