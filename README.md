@@ -1,6 +1,6 @@
 # Tool Chain
 
-The tools I used for daily working and funny.
+The tools I used for daily works and funny.
 
 # Dev
 ## APIs
@@ -10,6 +10,11 @@ The tools I used for daily working and funny.
 ## Docs
 - Dropbox Paper https://paper.dropbox.com/
 - Bear https://bear.app
+
+## Editor
+- VS Code https://code.visualstudio.com/
+- Sublime Text https://www.sublimetext.com/
+
 
 ## Prototyping, Flow
 - Whimsical https://whimsical.com/
@@ -32,7 +37,11 @@ The tools I used for daily working and funny.
 - Clipboards - Paste https://pasteapp.me/
 - For bad english writter Grammarly - https://app.grammarly.com/
 - Find large files & folders - DaisyDisk - https://daisydiskapp.com/
-- Windows Manager https://manytricks.com/moom/
+- Windows Manager - Moom - https://manytricks.com/moom/
+- 1Password https://1password.com/
+
+## Time Tracking
+- Project based time tracking - Toggl https://toggl.com/
 
 ## Health
 - For your eye - f.lux https://justgetflux.com/
