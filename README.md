@@ -21,6 +21,7 @@ The tools I used for daily working and funny.
 ## Git
 - SourceTree https://www.sourcetreeapp.com/
 - Hub https://hub.github.com/
+- My .gitconfig https://github.com/kenkuan/toolchain/blob/master/.gitconfig
 
 ## Terminal
 - iTerm2 https://www.iterm2.com/
