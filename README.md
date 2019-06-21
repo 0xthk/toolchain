@@ -32,6 +32,7 @@ The tools I used for daily working and funny.
 - Clipboards - Paste https://pasteapp.me/
 - For bad english writter Grammarly - https://app.grammarly.com/
 - Find large files & folders - DaisyDisk - https://daisydiskapp.com/
+- Windows Manager https://manytricks.com/moom/
 
 ## Health
 - For your eye - f.lux https://justgetflux.com/
